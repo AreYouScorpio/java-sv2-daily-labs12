@@ -52,7 +52,7 @@ public class CatalogItemTest {
 
     }
 
-/*
+
 
     @Test
     public void testNumberOfPagesAtOneItem() {
@@ -64,12 +64,15 @@ public class CatalogItemTest {
         assertEquals(385, catalogItem.fullLengthAtOneItem());
     }
 
+
+
     @Test
     public void testGetAllContributorsFromOneItem() {
         List<String> result = Arrays.asList("Imagine Dragons", "Dan Raynolds", "J.K. Rowling", "Iron Maiden", "Steve Harris");
         assertEquals(result, catalogItem.getContributors());
     }
 
+    /*
     @Test
     public void testGetTitlesFromAllFeature() {
         List<String> result = Arrays.asList("Night Visions", "Harry Potter", "Piece of Mind");

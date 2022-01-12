@@ -47,8 +47,8 @@ public class AudioFeatures implements Feature {
 
 
             List<String> result=new ArrayList<>();
-            result.addAll(performers);
-            result.addAll(composer);
+        result.addAll(composer);
+        result.addAll(performers);
             return result;
 
 

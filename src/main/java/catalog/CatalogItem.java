@@ -1,5 +1,6 @@
 package catalog;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,27 @@ public class CatalogItem {
         return registrationNumber;
     }
 
+public int numberOfPagesAtOneItem(){
 
+        int pages=0;
+        for(Feature f:features)
+    {
+        if(f instanceof PrintedFeatures)
+        pages=  (((PrintedFeatures) f).getNumberOfPages());
+    }
+        return pages;
+    }
+public int fullLengthAtOneItem(){
+
+        int length=0;
+        for(Feature f:features)
+    {
+        if(f instanceof AudioFeatures)
+        length+=  (((AudioFeatures) f).getLength());
+    }
+        return length;
+    }
 
 }
+
+
