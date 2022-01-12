@@ -41,11 +41,11 @@ public class Running {
         return runnings;
     }
 
-    public double sumKm(int year, Month month){
-        double sumKm =0;
+    public double sumKm(int year, Month month) {
+        double sumKm = 0;
         for (Run actual : runnings) {
-            if (actual.getDate().getYear()==year && actual.getDate().getMonth()==month) {
-                sumKm+=actual.getKm();
+            if (actual.getDate().getYear() == year && actual.getDate().getMonth() == month) {
+                sumKm += actual.getKm();
             }
         }
         return sumKm;
@@ -57,8 +57,6 @@ public class Running {
         System.out.println(running.sumKm(2021, Month.DECEMBER));
         System.out.println(running.sumKm(2021, Month.NOVEMBER));
         System.out.println(running.sumKm(2022, Month.JANUARY));
-
-
 
 
     }
