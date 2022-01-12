@@ -91,7 +91,6 @@ public class CatalogTest {
         assertEquals(485, catalog.getFullLength());
     }
 
-    /*
 
     @Test
     public void testAveragePageWithIllegalArgument() {
@@ -104,6 +103,8 @@ public class CatalogTest {
         });
         assertEquals("Page number must be positive", actualException.getMessage());
     }
+
+
 
     @Test
     public void testAveragePageWithZero() {
@@ -127,7 +128,7 @@ public class CatalogTest {
         assertEquals(600.0, catalog.averagePageNumberOver(501));
 
     }
-
+/*
     @Test
     public void testFindByCriteriaBoth() {
 

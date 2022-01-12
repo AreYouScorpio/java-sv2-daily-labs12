@@ -13,6 +13,16 @@ public class SearchCriteria {
     }
 
 
+    public SearchCriteria createByBoth(String a, String b) {
+
+    }
+    public SearchCriteria createByContributor(String a) {
+
+    }
+    public SearchCriteria createByTitle(String b) {
+
+    }
+
 
 
 

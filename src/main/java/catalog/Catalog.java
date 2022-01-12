@@ -61,4 +61,20 @@ public class Catalog {
         return result;
     }
 
+    public double averagePageNumberOver(int page) {
+        if (page<=0) throw new IllegalArgumentException("Page number must be positive");
+        int result=0;
+        int pieces=0;
+        List<CatalogItem> printOverPage = new ArrayList<>();
+        for (CatalogItem actual : catalogItems) {
+            if (actual.hasPrintedFeature() && actual.numberOfPagesAtOneItem() > page) {
+                result += actual.numberOfPagesAtOneItem();
+                pieces++;
+            }
+        }
+        if (pieces==0) throw new IllegalArgumentException("No page");
+        else return result/(pieces*1.0);
+    }
+
+
 }
