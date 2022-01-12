@@ -28,7 +28,7 @@ public class PrintedFeaturesTest {
         });
         assertEquals("Empty title", actualException.getMessage());
     }
-/*
+
     @Test
     public void invalidNumberOfPages() {
 
@@ -46,5 +46,4 @@ public class PrintedFeaturesTest {
 
     }
 
- */
 }

@@ -31,6 +31,8 @@ public class PrintedFeatures implements Feature {
 
     public PrintedFeatures(String title , int numberOfPages, List<String> authors) {
         if (title==null || title.isBlank()) throw new IllegalArgumentException("Empty title");
+        else if (numberOfPages<1) throw new IllegalArgumentException();
+        else if (authors==null || authors.isEmpty()) throw new IllegalArgumentException();
         else
         {
             this.authors = authors;
