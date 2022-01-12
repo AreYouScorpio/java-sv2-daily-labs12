@@ -66,6 +66,18 @@ public class CatalogItem {
         return result;
 
     }
+
+
+    public boolean hasAudioFeature(){
+        boolean audio=false;
+        for (Feature f : features)
+            if (features instanceof AudioFeatures) {
+                audio = true;
+            } else {audio = false;}
+            return audio;
+    }
+
+
 }
 
 
