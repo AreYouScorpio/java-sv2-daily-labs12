@@ -72,12 +72,14 @@ public class CatalogItemTest {
         assertEquals(result, catalogItem.getContributors());
     }
 
-    /*
+
     @Test
     public void testGetTitlesFromAllFeature() {
         List<String> result = Arrays.asList("Night Visions", "Harry Potter", "Piece of Mind");
         assertEquals(result, catalogItem.getTitles());
     }
+
+
 
     @Test
     public void testHasAudioFeature() {
@@ -85,6 +87,7 @@ public class CatalogItemTest {
         assertFalse(catalogItem2.hasAudioFeature());
     }
 
+    /*
     @Test
     public void testHasPrintedFeature() {
         assertTrue(catalogItem.hasAudioFeature());
