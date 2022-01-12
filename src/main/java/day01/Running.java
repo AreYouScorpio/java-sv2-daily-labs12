@@ -7,12 +7,15 @@ import java.io.StringReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Running {
 
     public static final String SEPARATOR = " km;";
+
+    public List<Run> runnings = new ArrayList<>();
 
     private String values;
     private Path fileName;
@@ -23,7 +26,6 @@ public class Running {
 
 
     public List<Run> runnings() {
-        List<Run> runnings = new ArrayList<>();
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName.toString()))) {
             reader.readLine();
@@ -39,10 +41,25 @@ public class Running {
         return runnings;
     }
 
+    public double sumKm(int year, Month month){
+        double sumKm =0;
+        for (Run actual : runnings) {
+            if (actual.getDate().getYear()==year && actual.getDate().getMonth()==month) {
+                sumKm+=actual.getKm();
+            }
+        }
+        return sumKm;
+    }
 
     public static void main(String[] args) {
         Running running = new Running(Paths.get("src/main/resources/running.csv"));
         System.out.println(running.runnings());
+        System.out.println(running.sumKm(2021, Month.DECEMBER));
+        System.out.println(running.sumKm(2021, Month.NOVEMBER));
+        System.out.println(running.sumKm(2022, Month.JANUARY));
+
+
+
 
     }
 }
