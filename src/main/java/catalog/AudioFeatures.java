@@ -3,17 +3,12 @@ package catalog;
 import java.util.List;
 
 public class AudioFeatures implements Feature {
-    public List<String> getComposer() {
-        return composer;
-    }
+
 
     public int getLength() {
         return length;
     }
 
-    public List<String> getPerformers() {
-        return performers;
-    }
 
     List<String> composer;
     int length;
@@ -21,21 +16,28 @@ public class AudioFeatures implements Feature {
     String title;
 
     public AudioFeatures (String title, int length, List<String> performers) {
-
+        this.length = length;
+        this.performers = performers;
+        this.title = title;
     }
 
     public AudioFeatures (String title, int length, List<String> performers, List<String> composer) {
-
+        this.composer = composer;
+        this.length = length;
+        this.performers = performers;
+        this.title = title;
     }
+
+
 
     @Override
     public List<String> getContributors() {
-        return null;
+        return performers;
     }
 
     @Override
     public String getTitle() {
-        return null;
+        return title;
     }
 
 
