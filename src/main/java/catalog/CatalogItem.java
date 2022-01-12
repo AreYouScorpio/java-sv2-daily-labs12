@@ -17,6 +17,7 @@ public class CatalogItem {
 
 
 
+
     public List<Feature> getFeatures() {
         return features;
     }
