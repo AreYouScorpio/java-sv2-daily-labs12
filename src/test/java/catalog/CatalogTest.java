@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CatalogTest {
 
-    /*
+
 
     public CatalogItem catalogItem1 = new CatalogItem("R-1", 300,
             new AudioFeatures("Night Visions", 185, Arrays.asList("Dan Raynolds"), Arrays.asList("Imagine Dragons")),
@@ -36,6 +36,7 @@ public class CatalogTest {
     );
 
     public Catalog catalog = new Catalog();
+
 
 
     @Test
@@ -67,6 +68,7 @@ public class CatalogTest {
         assertEquals(2, catalog.getPrintedLibraryItems().size());
     }
 
+
     @Test
     public void testGetAllPageNumber() {
 
@@ -77,6 +79,8 @@ public class CatalogTest {
 
     }
 
+
+
     @Test
     public void testGetFullLength() {
 
@@ -86,6 +90,8 @@ public class CatalogTest {
 
         assertEquals(485, catalog.getFullLength());
     }
+
+    /*
 
     @Test
     public void testAveragePageWithIllegalArgument() {

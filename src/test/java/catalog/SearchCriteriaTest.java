@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SearchCriteriaTest {
+/*
 
-    /*
     @Test
     public void testCreateByTitle() {
         SearchCriteria searchCriteria = SearchCriteria.createByTitle("Imagine Dragons");
@@ -15,6 +15,8 @@ public class SearchCriteriaTest {
         assertTrue(searchCriteria.hasTitle());
         assertFalse(searchCriteria.hasContributor());
     }
+
+
 
     @Test
     public void testCreateByContributor() {
