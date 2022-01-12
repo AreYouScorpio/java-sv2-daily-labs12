@@ -1,6 +1,8 @@
 package catalog;
 
+import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.collections.ListUtils;
 
 public class AudioFeatures implements Feature {
 
@@ -41,7 +43,16 @@ public class AudioFeatures implements Feature {
 
     @Override
     public List<String> getContributors() {
-        return performers;
+
+
+
+            List<String> result=new ArrayList<>();
+            result.addAll(performers);
+            result.addAll(composer);
+            return result;
+
+
+
     }
 
     @Override
