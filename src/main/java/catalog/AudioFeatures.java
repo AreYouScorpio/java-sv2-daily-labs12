@@ -16,17 +16,24 @@ public class AudioFeatures implements Feature {
     String title;
 
     public AudioFeatures (String title, int length, List<String> performers) {
-        this.length = length;
+        if (title==null || title.isBlank()) throw new IllegalArgumentException();
+        else if (length<1) throw new IllegalArgumentException();
+        else {
+            this.length = length;
         this.performers = performers;
-        this.title = title;
+        this.title = title;}
     }
 
     public AudioFeatures (String title, int length, List<String> performers, List<String> composer) {
+        if (title==null || title.isBlank()) throw new IllegalArgumentException();
+        else if (length<1) throw new IllegalArgumentException();
+        else {
         this.composer = composer;
         this.length = length;
         this.performers = performers;
         this.title = title;
-    }
+    }}
+
 
 
 
