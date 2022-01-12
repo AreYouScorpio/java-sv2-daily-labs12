@@ -87,7 +87,7 @@ public class CatalogItemTest {
         assertFalse(catalogItem2.hasAudioFeature());
     }
 
-    /*
+
     @Test
     public void testHasPrintedFeature() {
         assertTrue(catalogItem.hasAudioFeature());
@@ -95,5 +95,5 @@ public class CatalogItemTest {
     }
 
 
-     */
+
 }

@@ -71,13 +71,20 @@ public class CatalogItem {
     public boolean hasAudioFeature(){
         boolean audio=false;
         for (Feature f : features)
-            if (features instanceof AudioFeatures) {
+            if (f instanceof AudioFeatures) {
                 audio = true;
-            } else {audio = false;}
+            }
             return audio;
     }
 
-
+    public boolean hasPrintedFeature(){
+        boolean print=false;
+        for (Feature f : features)
+            if (f instanceof PrintedFeatures) {
+                print = true;
+            }
+        return print;
+    }
 }
 
 
