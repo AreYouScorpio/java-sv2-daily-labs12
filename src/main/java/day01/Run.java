@@ -11,8 +11,7 @@ public class Run {
         this.date = date;
     }
 
-    public Run(String line) {
-    }
+
 
     public double getKm() {
         return km;

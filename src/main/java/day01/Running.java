@@ -27,9 +27,13 @@ public class Running {
         List<Run> runnings = new ArrayList<>();
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName.toString()))) {
+            boolean firstRead = true;
             while ((line = reader.readLine()) != null) {
-                Run run = new Run(line);
-                runnings.add(run);
+                String[] fields = line.split(SEPARATOR);
+                Run run = new Run(Integer.parseInt(fields[0].trim()), LocalDate.parse(fields[1]));
+
+                if (!firstRead) runnings.add(run);
+                firstRead = false;
             }
         } catch (IOException ioe) {
             throw new IllegalStateException("Error by parsing, general io", ioe);
@@ -37,10 +41,7 @@ public class Running {
         return runnings;
     }
 
-    private Run parseLine(String line){
-        String[] fields = line.split(SEPARATOR);
-        return new Run(Integer.parseInt(fields[0].trim()), LocalDate.parse(fields[1]));
-            }
+
 
     public static void main(String[] args) {
         Running running = new Running(Paths.get("src/main/resources/running.csv"));
