@@ -30,8 +30,11 @@ public class PrintedFeatures implements Feature {
     }
 
     public PrintedFeatures(String title , int numberOfPages, List<String> authors) {
-        this.authors = authors;
+        if (title==null || title.isBlank()) throw new IllegalArgumentException("Empty title");
+        else
+        {
+            this.authors = authors;
         this.numberOfPages = numberOfPages;
-        this.title = title;
+        this.title = title;}
     }
 }
