@@ -29,4 +29,14 @@ public class Run {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "Run{" +
+                "km=" + km +
+                ", date=" + date +
+                '}';
+    }
+
+
 }

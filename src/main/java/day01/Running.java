@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,8 @@ public class Running {
         this.fileName = fileName;
     }
 
+
+
     public List<Run> runnings() {
         List<Run> runnings = new ArrayList<>();
         String line;
@@ -33,6 +36,11 @@ public class Running {
         }
         return runnings;
     }
+
+    private Run parseLine(String line){
+        String[] fields = line.split(SEPARATOR);
+        return new Run(Integer.parseInt(fields[0].trim()), LocalDate.parse(fields[1]));
+            }
 
     public static void main(String[] args) {
         Running running = new Running(Paths.get("src/main/resources/running.csv"));
