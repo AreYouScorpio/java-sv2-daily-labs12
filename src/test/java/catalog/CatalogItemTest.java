@@ -33,7 +33,7 @@ public class CatalogItemTest {
         assertEquals(result, catalogItem.getFeatures().get(0).getContributors());
 
     }
-/*
+
     @Test
     public void testGetFeaturesGetPrintedContributors() {
 
@@ -43,12 +43,16 @@ public class CatalogItemTest {
 
     }
 
+
+
     @Test
     public void testCreate() {
         assertEquals(300, catalogItem.getPrice());
         assertEquals("R-1", catalogItem.getRegistrationNumber());
 
     }
+
+/*
 
     @Test
     public void testNumberOfPagesAtOneItem() {
