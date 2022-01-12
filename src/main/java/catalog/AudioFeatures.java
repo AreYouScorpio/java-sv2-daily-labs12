@@ -17,6 +17,7 @@ public class AudioFeatures implements Feature {
 
     public AudioFeatures (String title, int length, List<String> performers) {
         if (title==null || title.isBlank()) throw new IllegalArgumentException();
+        else if (performers==null || performers.isEmpty()) throw new IllegalArgumentException();
         else if (length<1) throw new IllegalArgumentException();
         else {
             this.length = length;
@@ -26,6 +27,7 @@ public class AudioFeatures implements Feature {
 
     public AudioFeatures (String title, int length, List<String> performers, List<String> composer) {
         if (title==null || title.isBlank()) throw new IllegalArgumentException();
+        else if (performers==null || performers.isEmpty()) throw new IllegalArgumentException();
         else if (length<1) throw new IllegalArgumentException();
         else {
         this.composer = composer;
