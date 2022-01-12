@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Running {
 
-    public static final String SEPARATOR = ";";
+    public static final String SEPARATOR = " km;";
 
     private String values;
     private Path fileName;
@@ -22,25 +22,22 @@ public class Running {
     }
 
 
-
     public List<Run> runnings() {
         List<Run> runnings = new ArrayList<>();
         String line;
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName.toString()))) {
-            boolean firstRead = true;
+            reader.readLine();
+
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(SEPARATOR);
-                Run run = new Run(Integer.parseInt(fields[0].trim()), LocalDate.parse(fields[1]));
-
-                if (!firstRead) runnings.add(run);
-                firstRead = false;
+                Run run = new Run(Double.parseDouble(fields[0].split(" ")[1]), LocalDate.parse(fields[1]));
+                runnings.add(run);
             }
         } catch (IOException ioe) {
             throw new IllegalStateException("Error by parsing, general io", ioe);
         }
         return runnings;
     }
-
 
 
     public static void main(String[] args) {
