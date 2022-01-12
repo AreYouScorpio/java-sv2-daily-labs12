@@ -17,11 +17,12 @@ public class CatalogItemTest {
             new AudioFeatures("Piece of Mind", 200, Arrays.asList("Steve Harris"), Arrays.asList("Iron Maiden"))
     );
 
-    /*
+
 
     CatalogItem catalogItem2 = new CatalogItem("R-2", 300,
             new PrintedFeatures("Harry Potter", 600, Arrays.asList("J.K. Rowling"))
     );
+
 
 
     @Test
@@ -32,7 +33,7 @@ public class CatalogItemTest {
         assertEquals(result, catalogItem.getFeatures().get(0).getContributors());
 
     }
-
+/*
     @Test
     public void testGetFeaturesGetPrintedContributors() {
 

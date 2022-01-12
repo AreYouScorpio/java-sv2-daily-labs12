@@ -9,8 +9,8 @@ public class CatalogItem {
     int price;
     String registrationNumber;
 
-    public CatalogItem(String registrationNumber, int price, List<Feature> features ) {
-        this.features = features;
+    public CatalogItem(String registrationNumber, int price, Feature... features ) {
+        this.features = List.of(features);
         this.price = price;
         this.registrationNumber = registrationNumber;
     }
