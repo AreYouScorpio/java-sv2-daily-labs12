@@ -1,5 +1,6 @@
 package catalog;
 
+import java.util.Collections;
 import java.util.List;
 
 public class PrintedFeatures implements Feature {
@@ -19,15 +20,18 @@ public class PrintedFeatures implements Feature {
 
     @Override
     public List<String> getContributors() {
-        return null;
+
+        return authors ;
     }
 
     @Override
     public String getTitle() {
-        return null;
+        return title;
     }
 
-    public PrintedFeatures(String title, int numberOfPages, List<String> authors){
-
+    public PrintedFeatures(String title , int numberOfPages, List<String> authors) {
+        this.authors = authors;
+        this.numberOfPages = numberOfPages;
+        this.title = title;
     }
 }
