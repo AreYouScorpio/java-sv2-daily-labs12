@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class SearchCriteriaTest {
 
+    /*
     @Test
     public void testCreateByTitle() {
         SearchCriteria searchCriteria = SearchCriteria.createByTitle("Imagine Dragons");
@@ -53,4 +54,6 @@ public class SearchCriteriaTest {
             SearchCriteria.createByBoth(null, "Metallica");
         });
     }
+
+     */
 }

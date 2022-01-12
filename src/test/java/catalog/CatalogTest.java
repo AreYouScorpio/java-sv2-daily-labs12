@@ -5,15 +5,19 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+/*
 import static catalog.SearchCriteria.createByBoth;
 import static catalog.SearchCriteria.createByContributor;
 import static catalog.SearchCriteria.createByTitle;
+
+ */
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class CatalogTest {
 
+    /*
 
     public CatalogItem catalogItem1 = new CatalogItem("R-1", 300,
             new AudioFeatures("Night Visions", 185, Arrays.asList("Dan Raynolds"), Arrays.asList("Imagine Dragons")),
@@ -157,4 +161,6 @@ public class CatalogTest {
 
     }
 
+
+     */
 }
