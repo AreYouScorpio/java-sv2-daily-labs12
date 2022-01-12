@@ -51,6 +51,15 @@ public int fullLengthAtOneItem(){
     }
         return length;
     }
+public List<String> getContributors(){
+
+        List<String> result = new ArrayList<>();
+        for(Feature f:features)
+    {
+        result.add(f.getContributors().toString());
+    }
+        return result;
+    }
 
 }
 
