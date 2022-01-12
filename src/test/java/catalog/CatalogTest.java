@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-/*
+
 import static catalog.SearchCriteria.createByBoth;
 import static catalog.SearchCriteria.createByContributor;
 import static catalog.SearchCriteria.createByTitle;
 
- */
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -128,7 +128,7 @@ public class CatalogTest {
         assertEquals(600.0, catalog.averagePageNumberOver(501));
 
     }
-/*
+
     @Test
     public void testFindByCriteriaBoth() {
 
@@ -169,5 +169,5 @@ public class CatalogTest {
     }
 
 
-     */
+
 }

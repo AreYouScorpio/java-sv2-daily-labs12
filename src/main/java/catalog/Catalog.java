@@ -3,6 +3,7 @@ package catalog;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import static catalog.SearchCriteria.*;
 
 public class Catalog {
 
@@ -76,5 +77,15 @@ public class Catalog {
         else return result/(pieces*1.0);
     }
 
+    public List<CatalogItem> findByCriteria(SearchCriteria sc){
+        List<CatalogItem> result = new ArrayList<>();
+        for (CatalogItem actual : catalogItems) {
+            if (
+                    (!sc.hasContributor() || (actual.getContributors().contains(sc.getContributor())))&&
+                    (!sc.hasTitle() || (actual.getTitles().contains(sc.getTitle())))
+            ) result.add(actual);
+        }
+        return result;
+    }
 
 }
