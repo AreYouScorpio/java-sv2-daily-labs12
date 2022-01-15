@@ -1,9 +1,13 @@
 package day05;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
-public class StringStatistics {
+public class StringStatistics implements Comparator<Map> {
+
+    @Override
+    public int compare(Map o1, Map o2) {
+        return o1.get()-o2.get();
+    }
 
     private Map<Character, Integer> howManyCharacterIsInTheString(String input) {
 
@@ -23,7 +27,19 @@ public class StringStatistics {
                 map.put(ch[i], 1);
             }
         }
+
+
+
         System.out.println(map);
+
+        /*
+        List<Character> employeeByKey = new ArrayList<>(map.keySet());
+        Collections.sort(employeeByKey);
+        System.out.println(employeeByKey);
+         */
+
+
+
         return map;
     }
 
