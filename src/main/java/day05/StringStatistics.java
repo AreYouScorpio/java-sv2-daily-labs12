@@ -2,16 +2,15 @@ package day05;
 
 import java.util.*;
 
-public class StringStatistics implements Comparator<Map> {
+public class StringStatistics {
 
-    @Override
-    public int compare(Map o1, Map o2) {
-        return o1.get()-o2.get();
-    }
+
 
     private Map<Character, Integer> howManyCharacterIsInTheString(String input) {
 
-        Map<Character, Integer> map = new LinkedHashMap<>();
+        Map<Character, Integer> map = new TreeMap<>();
+
+        // HashMap - sorrend kupacok alapján ; TreeMap - sorrend ASCII alapján, Linked.. - input sorrend alapján
 
         char[] ch = new char[input.length()];
 
