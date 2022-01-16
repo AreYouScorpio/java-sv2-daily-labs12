@@ -10,7 +10,7 @@ public class StringStatistics {
 
         Map<Character, Integer> map = new TreeMap<>();
 
-        // HashMap - sorrend kupacok alapján ; TreeMap - sorrend ASCII alapján, Linked.. - input sorrend alapján
+        // HashMap - sorrend kupacok alapján ; TreeMap - sorrend ASCII alapján, LinkedHashMap.. - input sorrend alapján
 
         char[] ch = new char[input.length()];
 
